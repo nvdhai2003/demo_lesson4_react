@@ -1,11 +1,14 @@
 import {StatusBar} from 'expo-status-bar';
-import {StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View} from 'react-native';
 
-export default function Home() {
+export default function Home({navigation}) {
     return (
         <View style={styles.container}>
             {/*Navigation*/}
             <Text>HOME</Text>
+            <Button title={"Go to Profile"} onPress={() => {
+                navigation.navigate('Profile')
+            }}/>
             <StatusBar style="auto"/>
         </View>
     );
